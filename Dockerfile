@@ -1,7 +1,7 @@
 from node:latest as builder
-copy .
+copy . .
 run npm install
 run npx weblack
 
 from nginx:latest
-copy --from=builder dist/*
+copy --from=builder dist/* .
